@@ -11,11 +11,11 @@
     <ul>
         <p>Para devolver a chave é só tocar no nome que pegou emprestado!</p>
         {% for inscritos in list %}
-        <li> {{ user.username }} Pegou  {{inscritos.chave}} -  {{inscritos.horas_p}} </li>
+        <li> {{ inscritos.user }}: Pegou a chave do {{inscritos.chave}} -  {{inscritos.horas_pegou}} </li>
         {% endfor %}
         -=-=-=-=-=--=-==--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-
         {% for inscritos2 in list2 %}
-        <li> {{ user.username }} Devolveu {{inscritos2.horas_d}} {{inscritos2.chave}}</li>
+        <li> {{ inscritos2.user }}: Devolveu a chave do {{inscritos2.horas_devolveu}} {{inscritos2.chave}}</li>
         {% endfor %}
     </ul>
 </body>

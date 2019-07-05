@@ -8,6 +8,15 @@
     <title>Document</title>
 </head>
 <body>
+{% block content %}
+{% if user.is_authenticated %}
+Bem-vindo {{ user.username }}!
+<a class="btn btn-danger" href="{% url 'logout'%}"> Sair</a>
+{% else %}
+<a href="{% url 'login' %}">login</a>
+{% endif %}
+{% endblock %}
+
     <h1>Primeiro django para chaves</h1>
 
     <a href="mostrar_chaves">Chaves Cadastradas</a>

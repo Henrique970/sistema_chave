@@ -11,7 +11,7 @@
 <h4>As chaves que precisam ser devolvidas são:</h4>
     <ul>
         {% for inscritos in list %}
-        <li><a href="{% url 'devolver_chave' inscritos.id %}">{{inscritos.nome}}</a></li>
+        <li><a href="{% url 'devolver_chave' inscritos.id %}">{{inscritos.chave}}</a></li>
         {% endfor %}
    </ul>
 </body>
